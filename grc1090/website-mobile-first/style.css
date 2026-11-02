@@ -4,6 +4,7 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 
 body {
     font-family: sans-serif;
+	background-color: red;
 }
 
 
@@ -17,6 +18,7 @@ div.home-container {
 div.container { 
 	position: relative;
 	min-height: 100vh;
+	background-color: white;
 }
 
 /* >>> IMPORTANT: you have to change the wrap of the content of your home page (index) in a div with a class home-container to make it work. If you used a div with the class container on your home, you’ll only need to change the name of the class. And you need a div with the class container and all the other pages.  */
@@ -43,9 +45,9 @@ header h1 {
 	}
 
 main h1 {
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: bold;
-	margin: 0em 0 0.5em;
+	margin: 1em 0 0.5em;
 }
 
 h2, h3, h4 {
@@ -53,12 +55,12 @@ h2, h3, h4 {
 }
 
 h2 {
-	font-size: 1.2em;
+	font-size: 1.8em;
 	margin: 1em 0 0.5em;
 	}
 	
 h3 {
-	font-size: 1em;
+	font-size: 1.5em;
 	margin: 1em 0 0.25em;
 }
 
@@ -121,7 +123,7 @@ nav ul li a {
 	
 
 p.slogan {
-	font-size: 2em;
+	font-size: 5em;
 	font-family: serif;
 	font-style: italic;
 	margin: 1em 0 2em;
@@ -146,3 +148,55 @@ footer p {
 	margin: 0;
 }
 
+nav ul li.selected a {
+    background-color: orange;
+}
+
+article {
+    background-color: cyan;
+}
+
+@media screen and (min-width: 60em) {
+
+	div.home-container,
+	div.container {
+    	max-width: 100em;
+    	margin: 0 auto;
+	}
+
+	header {
+		grid-template-columns: auto 1fr;
+		padding: 2em 1em;
+		align-items: center;
+	}
+
+	header h1 {
+		width: 14em;
+	}
+
+	nav ul li {
+		display: inline;
+		margin-left: 1em;
+	}
+
+	main.menu ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 4em;
+	}
+
+	article {
+    	max-width: 50em;
+    	margin: 0 auto;
+	}	
+
+	nav ul li a {
+		font-size: 2em;
+		padding: 0.5em 1em;
+	}
+
+	main {
+		padding: 2em 2em 4em;
+	}
+
+}
